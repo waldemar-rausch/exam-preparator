@@ -1,0 +1,209 @@
+body {
+    background: none repeat scroll 0 0 #39413D;
+}
+
+.login {
+    background: none repeat scroll 0 0 #1E1E1E;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    height: 285px;
+    margin: 50px auto;
+    overflow: hidden;
+    width: 300px;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.header {
+    background: none repeat scroll 0 0 #04555D;
+    color: white;
+    height: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.login .titulo {
+    background: none repeat scroll 0 0 #121212;
+    border: 1px solid #2D2D2D;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    color: #BFBFBF;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    height: 14px;
+    margin-bottom: 30px;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    text-align: center;
+    width: 298px;
+}
+
+.login form {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    width: 240px;
+}
+
+.login form input[type="text"], .login form input[type="password"] {
+    background: none repeat scroll 0 0 #141414;
+    border: medium none;
+    color: #BFBFBF;
+    font-size: 12px;
+    margin: 0;
+    outline: medium none;
+    padding-bottom: 14px;
+    padding-left: 40px;
+    padding-top: 14px;
+    width: 200px;
+}
+
+.login form input[type="text"] {
+    border-top: 1px solid #0B0B0B;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.login form input[type="password"] {
+    border-bottom: 1px solid #353535;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top: 1px solid #0B0B0B;
+}
+
+.login form .enviar {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #349E92;
+    border-color: #4EB2A8 -moz-use-text-color #161616;
+    border-image: none;
+    border-left: medium none;
+    border-radius: 6px 6px 6px 6px;
+    border-right: medium none;
+    border-style: solid none;
+    border-width: 1px medium;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    height: 12px;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px #1D7464, 0 1px #7BB8B3;
+    width: 240px;
+}
+
+.login .olvido {
+    font-size: 10px;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    text-align: center;
+    width: 240px;
+}
+
+.login .olvido .col {
+    float: left;
+    height: auto;
+    width: 50%;
+}
+
+.shadow {
+    box-shadow: 0 0 10px #000000 inset;
+}
+
+.login .olvido .col a {
+    color: #FFFFFF;
+    font: 12px Arial;
+    text-decoration: none;
+}
+
+.logedUser {
+    background-color: #999BA4;
+    border: 1px solid white;
+    color: white;
+    float: right;
+    margin-top: 6px;
+    padding: 10px;
+    width: 300px;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+.text-white {
+    color: white;
+}
+
+.menu {
+    background: none repeat scroll 0 0 #E1EBEB;
+    box-shadow: 0 0 10px #000000 inset;
+    height: 40px;
+    width: 100%;
+}
+
+.cmsIcon {
+    float: right;
+    margin-left: 29px;
+    margin-top: 5px;
+}
+
+th {
+    background: none repeat scroll 0 0 #04555D;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+}
+
+.content {
+    background: none repeat scroll 0 0 white;
+    box-shadow: 3px 3px 27px #000000 inset;
+    margin-top: 25px;
+    min-height: 300px;
+    padding: 25px;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none outside none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
