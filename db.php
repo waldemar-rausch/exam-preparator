@@ -1,5 +1,5 @@
 <?php 
-$link = mysql_connect('localhost', 'wrausch', 'Waldemar123');
+$link = mysql_connect('localhost', 'user', 'password');
 if (!$link) {
 	die('Verbindung schlug fehl: ' . mysql_error());
 }
