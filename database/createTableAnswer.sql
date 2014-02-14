@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `answers` (
   `evaluation` int(11) NOT NULL,
   `explanation` text COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=300 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
