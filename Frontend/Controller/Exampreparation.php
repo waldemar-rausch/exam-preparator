@@ -19,7 +19,7 @@ class Frontend_Controller_ExamPrepartation extends Libs_BaseController
 		}
 		
 		if (method_exists($this, $_GET['action'])) {
-			call_user_method($_GET['action'], $this);
+			call_user_func($_GET['action'], $this);
 		}
 	}
 	
@@ -33,7 +33,6 @@ class Frontend_Controller_ExamPrepartation extends Libs_BaseController
 			if ($_POST['nickName'] == $row['nickName']
 				&& $_POST['password'] == $row['password'] )
 			{
-				$error = '';
 				if(!isset($_SESSION['user'])){
 					$_SESSION['user'] = $row['nickName'];
 					$_SESSION['password'] = $row['password'];
