@@ -26,7 +26,7 @@ class ExamPrepartationController extends Libs_BaseController
 		
 		$data = $this->_exam->listBy($offset, $max);
 		require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/backend/View/listExam.php';
-		include '/'.$_SERVER['DOCUMENT_ROOT'] . '/backend/View/paging/paging.php';
+		require_once '/'.$_SERVER['DOCUMENT_ROOT'] . '/backend/View/paging/paging.php';
 	}
 	
 	/**
