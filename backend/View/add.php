@@ -3,7 +3,6 @@
 		<meta content="text/html; charset=utf-8" http-equiv="content-type">
 		<link href="../style.css" type="text/css" rel="stylesheet">
 		<script src="../ckeditor.js"></script>
-		<link rel="stylesheet" href="sample.css">
 	</head>
 	<div class="header"> 
 		<img style="width: 88px;" alt="" src="../exam.jpg">
