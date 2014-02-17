@@ -5,7 +5,13 @@ require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/Frontend/Controller/Exampreparatio
 
 
 $controller = new Frontend_Controller_ExamPrepartation();
-$controller->index();
+try{
+    $controller->index();
+} catch (Exception $e) {
+    echo $e->getMessage();
+    echo '<br /><a href="/myProject/index.php">Zurück zur Anmeldung.</a>';
+    die;
+}
 
 require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/session.php';
 ?>
