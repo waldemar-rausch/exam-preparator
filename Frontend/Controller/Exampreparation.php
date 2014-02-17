@@ -19,7 +19,7 @@ class Frontend_Controller_ExamPrepartation extends Libs_BaseController
 		}
 		
 		if (method_exists($this, $_GET['action'])) {
-			call_user_func($_GET['action'], $this);
+			call_user_method($_GET['action'], $this);
 		}
 	}
 	
