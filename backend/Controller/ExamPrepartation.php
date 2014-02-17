@@ -14,7 +14,7 @@ class ExamPrepartationController extends Libs_BaseController
 
 		$this->_exam = new ExamPreparation($this->_database);
 		if (method_exists($this, $_GET['action'])) {
-			call_user_method($_GET['action'], $this);
+			call_user_func($_GET['action'], $this);
 		}
 	}
 	
