@@ -15,7 +15,7 @@ class Frontend_Controller_ExamPrepartation extends Libs_BaseController
 		$this->_exam = new Frontend_Model_Exampreparation($this->_database);
 		
 		if (!$this->accessAllowed()) {
-			trigger_error('Benutzername oder Password ist falsch.');
+		    throw new Exception('Benutzername oder Password ist falsch.');
 		}
 		
 		if (method_exists($this, $_GET['action'])) {
