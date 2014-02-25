@@ -24,7 +24,7 @@ class Frontend_Controller_ExamPrepartation extends Libs_BaseController
 	}
 	
 	/**
-	 * 
+	 * @return bool
 	 */
 	protected function accessAllowed()
 	{
@@ -38,8 +38,8 @@ class Frontend_Controller_ExamPrepartation extends Libs_BaseController
 					$_SESSION['password'] = $row['password'];
 				}
 				if ($row['isAdmin']) {
-					header("Location: /exam.php");
 					$_SESSION['isAdmin'] = true;
+					$this->exam();
 				}
 				return true;
 			}
@@ -48,9 +48,15 @@ class Frontend_Controller_ExamPrepartation extends Libs_BaseController
 		return false;
 	}
 	
+	/**
+	 * @return null 
+	 */
 	protected function exam()
 	{
-		//Put the exam here
+		$topic = $this->_exam->fetchTopic();
+        	$questionRows = $this->_exam->fetchQuestions();
+	 	$answerRows = $this->_exam->fetchAnswers();
+        	require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/Frontend/View/Exampreparation.php'
 	}
 }
 ?>
