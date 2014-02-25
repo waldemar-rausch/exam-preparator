@@ -86,5 +86,32 @@ class Frontend_Model_Exampreparation extends Base
 
         return $answers;
     }
+    
+    public function getSolution()
+    {
+        $pdoStatement = $this->_pdo->prepare("
+            SELECT
+				question.id,
+				question.question,
+				question.startDate,
+				answers.examid,
+				answers.id,
+				answers.answer,
+				answers.evaluation,
+				answers.explanation
+			FROM
+				question,
+				answers
+			WHERE
+				startDate = :date
+			AND
+				question.id = answers.examid
+			AND
+				answers.evaluation = 1");
+        $pdoStatement->bindValue(':date', date("Y-m-d"), PDO::PARAM_STR);
+        $pdoStatement->execute();
+        $solutions = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+        return $solutions;
+    }
 }
 ?>
