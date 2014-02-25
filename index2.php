@@ -1,6 +1,5 @@
 <?php 
-require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/session.php';
-require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/db.php';
+session_start();
 require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/backend/Controller/ExamPrepartation.php';
 
 if ($_SESSION['isAdmin']) {
