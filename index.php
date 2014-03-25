@@ -15,5 +15,5 @@
 		        <a href="#" onClick="document.getElementById('examTest').submit()" class="enviar">Anmelden</a>
 		    </form>
 </section>
-	</body>   kjhjhjhjh
+	</body>
 </html>
