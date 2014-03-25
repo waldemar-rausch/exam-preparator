@@ -67,7 +67,7 @@ class Frontend_Controller_ExamPreparation extends Libs_BaseController
 		$topic = $this->_exam->fetchTopic();
         	$questionRows = $this->_exam->fetchQuestions();
 	 	$answerRows = $this->_exam->fetchAnswers();
-        	require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/Frontend/View/Exampreparation.php'
+        	require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/Frontend/View/Exampreparation.php';
 	}
 	
 	protected function solution()
