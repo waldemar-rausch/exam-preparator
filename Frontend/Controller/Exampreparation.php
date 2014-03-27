@@ -9,15 +9,15 @@ class Frontend_Controller_ExamPreparation extends Libs_BaseController
 	protected $_exam = null;
 	
 	public function check()
-    	{
-        	parent::index();
-        	$this->_exam = new Frontend_Model_Exampreparation($this->_database);
-        	if (!$this->accessAllowed()) {
-            		throw new Exception('Benutzername oder Password ist falsch.');
-	 	}
+    {
+        parent::index();
+        $this->_exam = new Frontend_Model_Exampreparation($this->_database);
+        if (!$this->accessAllowed()) {
+                throw new Exception('Benutzername oder Password ist falsch.');
+	    }
 	 
-        	$this->exam();
-    	}
+        $this->exam();
+    }
 	
 	public function index()
 	{
@@ -65,15 +65,15 @@ class Frontend_Controller_ExamPreparation extends Libs_BaseController
 	protected function exam()
 	{
 		$topic = $this->_exam->fetchTopic();
-        	$questionRows = $this->_exam->fetchQuestions();
+        $questionRows = $this->_exam->fetchQuestions();
 	 	$answerRows = $this->_exam->fetchAnswers();
-        	require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/Frontend/View/Exampreparation.php';
+        require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/Frontend/View/Exampreparation.php';
 	}
 	
 	protected function solution()
-    	{
-        	$answerRows = $this->_exam->getSolution();
-        	require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/Frontend/View/Solution.php';
-    	}
+    {
+        $answerRows = $this->_exam->getSolution();
+        require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/Frontend/View/Solution.php';
+    }
 }
 ?>

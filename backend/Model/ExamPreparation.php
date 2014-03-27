@@ -150,27 +150,32 @@ class ExamPreparation extends Base
 	{
 		for ($counter = 0; $counter < count($post['explanation']); $counter++) {
 			$post['answer' . $counter + 1] = $this->replaceDoubleQuoteFrom($post['answer' . $counter + 1]);
-			mysql_query('INSERT INTO 
-							answers(
-								examid,
-								answer,
-								evaluation,
-								explanation)
-						VALUES(
-							'.$this->_insertId.',
-							"'.htmlentities($post['answer'.($counter + 1)]).'",
-							'.(int)$post['rightAnswer'.($counter + 1)].',
-							"'.htmlentities($post['explanation'][$counter]).'"
-							);'
-			);
+            $pdoStatement = $this->_pdo->prepare('
+                INSERT INTO answers (
+                    examid,
+                    answer,
+                    evaluation,
+                    explanation
+				) VALUES (
+                    :insertId,
+                    :answer,
+                    :rightAnswer,
+                    :explanation
+                );
+
+			');
+            $pdoStatement->bindValue(':insertId', $this->_insertId, PDO::PARAM_INT);
+            $pdoStatement->bindValue(':answer', $post['answer'.($counter + 1)], PDO::PARAM_STR);
+            $pdoStatement->bindValue(':rightAnswer', $post['rightAnswer'.($counter + 1)], PDO::PARAM_INT);
+            $pdoStatement->bindValue(':explanation', $post['explanation'][$counter], PDO::PARAM_STR);
 		}
 	}
-	
-	/**
-	 * 
-	 * @param string $postValue
-	 */
-	protected function replaceDoubleQuoteFrom($postValue)
+
+    /**
+     * @param $postValue
+     * @return mixed
+     */
+    protected function replaceDoubleQuoteFrom($postValue)
 	{
 		$postValue = str_replace('"', '&rdquo;', $postValue);
 		

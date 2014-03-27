@@ -6,8 +6,8 @@ if ($_SESSION['isAdmin']) {
     $counter = 0;
     ?>
     <fieldset>
-        <legend>Thema: <?php echo $topic['topic']?></legend>
-        <form action="/solution.php" method="post">
+        <legend>Thema: <?php echo $topic;?></legend>
+        <form class="examForm" action="/solution.php" method="post">
             <?php
             foreach ($questionRows as $questionRow) {
                 $counter++;
@@ -71,6 +71,9 @@ if ($_SESSION['isAdmin']) {
             text-align: left;
             text-decoration: none;
             text-shadow: 0 -1px #1D7464, 0 1px #7BB8B3;
+        }
+        .examForm{
+            padding: 10px;
         }
 
     </style>
