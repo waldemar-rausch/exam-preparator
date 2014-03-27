@@ -46,7 +46,7 @@
                     <?php echo $row['id']; ?>
                 </td>
                 <td>
-                    <?php echo nl2br($row['question']) ?>
+                    <?php echo $row['question']; ?>
                 </td>
                 <td>
                     <?php echo date('d.m.Y', strtotime($row['startDate'])); ?>
