@@ -17,8 +17,9 @@
 		<form method="post" name="logout" action="../logout.php">
 			<input title="logout" class="cmsIcon" src="../logout.png" name="logout" style="width:32px;float:left;margin-left:1px" type="image">
 		</form>
+        &nbsp;&nbsp;&nbsp;<a class="historyBack" href="javascript:history.back()">zurück</a>
 		<form method="post" name="add" action="/index2.php?action=add&page=1">
-			<button title="speichern" onClick="document.newEntry.submit()" class="cmsIcon" type="button" style="border: 0; background: transparent">
+			<button style="background: none repeat scroll 0 center rgba(0, 0, 0, 0); border: 0 none;margin-top:-13px;" title="speichern" onClick="document.newEntry.submit()" class="cmsIcon" type="button" style="border: 0; background: transparent">
 			    <img src="../icons/save_32.png" alt="save" />
 			</button>
 		</form>
@@ -31,11 +32,11 @@
 			<b>Antwortmöglichkeiten</b>
 			<br /><br />
 			Antwort 1:
-			<input type="text" name="answer1" id="1" value=""/>
+			<input type="text" name="answer[]" value=""/>
 			<br/>
 			
 			Antwort ist richtig:
-			<input type="checkbox" name="rightAnswer1" value="1" />
+			<input type="checkbox" name="rightAnswer[]" value="1" />
 			<br/>
 			<label for="explanation">Erläuterung:</label>
 			<br/>
@@ -43,11 +44,11 @@
 			<hr/>
 			<br/>
 			Antwort 2:
-			<input type="text" name="answer2" id="2" value=""/>
+			<input type="text" name="answer[]" value=""/>
 			<br/>
 			
 			Antwort ist richtig:
-			<input type="checkbox" name="rightAnswer2" value="1" />
+			<input type="checkbox" name="rightAnswer[]" value="1" />
 			<br/>
 			<label for="explanation">Erläuterung:</label>
 			<br/>
@@ -55,11 +56,11 @@
 			<hr/>
 			<br/>
 			Antwort 3:
-			<input type="text" name="answer3" id="3" value=""/>
+			<input type="text" name="answer[]" value=""/>
 			<br/>
 			
 			Antwort ist richtig:
-			<input type="checkbox" name="rightAnswer3" value="1" />
+			<input type="checkbox" name="rightAnswer[]" value="1" />
 			<br/>
 			<label for="explanation">Erläuterung:</label>
 			<br/>
@@ -67,19 +68,23 @@
 			<hr/>
 			<br/>
 			Antwort 4:
-			<input type="text" name="answer4" id="4" value=""/>
+			<input type="text" name="answer[]" value=""/>
 			<br/>
 			
 			Antwort ist richtig:
-			<input type="checkbox" name="rightAnswer4" value="1" />
+			<input type="checkbox" name="rightAnswer[]" value="1" />
 			<br/>
 			<label for="explanation">Erläuterung:</label>
 			<br/>
 			<textarea class="" style="width:100%" name="explanation[]" rows="10"></textarea>
 			<br/>
 			<br>
-			Start Datum:
-			<input type="text" value="" name="startDate" maxlength="10">
+			<div>Start Datum:</div>
+			<input style="float:left;" type="text" value="" name="startDate" maxlength="10">
+            &nbsp;&nbsp;
+            <button style="margin-top:-5px;float:left;border: 0; background: transparent" type="button" class="cmsIcon" onclick="document.newEntry.submit()" title="speichern">
+                <img alt="save" src="../icons/save_32.png">
+            </button>
 			<input type="hidden" name="action" value="send"/>
 		</form>
 	</div>

@@ -1,7 +1,5 @@
-<?php 
-require_once 'session.php';
-require_once 'db.php';
+<?php
+session_start();
 session_destroy();
-mysql_close($link);
 header("Location: /index.php");
 ?>

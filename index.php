@@ -12,7 +12,7 @@
 			<form action="/check.php" id="examTest" method="post" enctype="application/x-www-form-urlencoded">
 		    	<input type="text" name="nickName" placeholder="Benutzername" data-icon="U">
 		        <input type="password" name="password" placeholder="Passwort" data-icon="x">
-		        <a href="#" onClick="document.getElementById('examTest').submit()" class="enviar">Anmelden</a>
+                <input type="submit" value="anmelden" class="enviar">
 		    </form>
 </section>
 	</body>

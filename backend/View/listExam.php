@@ -1,3 +1,14 @@
+<?php
+function cutString($str, $n_chars, $crop_str = '...') {
+    $buff = strip_tags($str);
+    if (mb_strlen($buff) > $n_chars) {
+        $cut_index = mb_strpos($buff, ' ', $n_chars);
+        $buff = mb_substr($buff, 0, ($cut_index === false ? $n_chars : $cut_index + 1), "UTF-8") . $crop_str;
+    }
+    return $buff;
+}
+?>
+
 <html>
 <head>
     <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/style.css" type="text/css" rel="stylesheet">
@@ -32,7 +43,7 @@
         <table style="width:100%;">
             <tr>
                 <th>#ID</th>
-                <th>Frage</th>
+                <th>Titel/Frage</th>
                 <th>Freischaltdatum</th>
                 <th>Autor</th>
                 <th>&nbsp;</th>
@@ -46,7 +57,14 @@
                     <?php echo $row['id']; ?>
                 </td>
                 <td>
-                    <?php echo $row['question']; ?>
+                    <?php
+                    if(!empty($row['topic'])) {
+                        echo $row['topic'];
+                    } else {
+                        $row['question'] = cutString($row['question'], 120);
+                        echo $row['question'];
+                    }
+                    ?>
                 </td>
                 <td>
                     <?php echo date('d.m.Y', strtotime($row['startDate'])); ?>

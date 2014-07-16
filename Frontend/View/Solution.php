@@ -17,8 +17,6 @@ foreach ($answerRows as $answerRow) {
     echo 'lautet die richtige Antwort: '.$answerRow['answer']. ' <br />' ;
     echo htmlentities('Erläuterung: ').$answerRow['explanation']. ' <br /><hr>';
 }
-
-echo '<b>Bespreche bitte die Fragen mit deinen Kollegen.</b>';
 ?>
 <form action="/logout.php" method="post">
 	<input type="submit" name="logout" value="logout" />

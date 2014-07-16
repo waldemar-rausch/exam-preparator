@@ -1,6 +1,7 @@
 <?php 
 require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/Libs/BaseController.php';
 require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/Frontend/Model/Exampreparation.php';
+require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/Libs/Model/Template.php';
 class Frontend_Controller_ExamPreparation extends Libs_BaseController
 {
 	/**
@@ -10,7 +11,7 @@ class Frontend_Controller_ExamPreparation extends Libs_BaseController
 	
 	public function check()
     {
-        parent::index();
+        $this->index();
         $this->_exam = new Frontend_Model_Exampreparation($this->_database);
         if (!$this->accessAllowed()) {
                 throw new Exception('Benutzername oder Password ist falsch.');
@@ -72,8 +73,9 @@ class Frontend_Controller_ExamPreparation extends Libs_BaseController
 	
 	protected function solution()
     {
-        $answerRows = $this->_exam->getSolution();
-        require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/Frontend/View/Solution.php';
+        $template = new Libs_Template('/'.$_SERVER['DOCUMENT_ROOT'] .'/Frontend/View/Solution.php');
+        #$template->answerRows = $this->_exam->getSolution();
+        #require_once '/'.$_SERVER['DOCUMENT_ROOT'] .'/Frontend/View/Solution.php';
     }
 }
 ?>

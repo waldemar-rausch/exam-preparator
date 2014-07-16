@@ -1,6 +1,6 @@
 <?php
 if ($_SESSION['isAdmin']) {
-    echo '<a href="http://'.$_SERVER['SERVER_NAME'].'/myProject/index2.php?action=listAll&amp;page=1">zur Verwaltung</a><br /><br />';
+    echo '<a href="http://'.$_SERVER['SERVER_NAME'].'/index2.php?action=listAll&amp;page=1">zur Verwaltung</a><br /><br />';
 }
     $memoAnswer = '';
     $counter = 0;

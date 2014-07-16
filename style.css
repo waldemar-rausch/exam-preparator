@@ -94,7 +94,7 @@ body {
     font-size: 12px;
     font-weight: bold;
     height: 12px;
-    padding-bottom: 14px;
+    padding-bottom: 28px;
     padding-top: 14px;
     text-align: center;
     text-decoration: none;
@@ -206,4 +206,10 @@ blockquote:before, blockquote:after, q:before, q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+.historyBack{
+    float: left;
+    margin-left: 20px;
+    margin-top: 12px;
 }
