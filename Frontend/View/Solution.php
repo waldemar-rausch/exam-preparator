@@ -15,7 +15,7 @@
 foreach ($answerRows as $answerRow) {
     echo htmlentities('Für die Frage: ').nl2br($answerRow['question']). ' <br />';
     echo 'lautet die richtige Antwort: '.$answerRow['answer']. ' <br />' ;
-    echo htmlentities('Erläuterung: ').$answerRow['explanation']. ' <br /><hr>';
+    echo htmlentities('Erläuterung: ').nl2br($answerRow['explanation']). ' <br /><hr>';
 }
 ?>
 <form action="/logout.php" method="post">
