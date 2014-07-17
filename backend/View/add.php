@@ -36,7 +36,7 @@
 			<br/>
 			
 			Antwort ist richtig:
-			<input type="checkbox" name="rightAnswer[]" value="1" />
+			<input id="0" type="checkbox" name="rightAnswer0" value="1" />
 			<br/>
 			<label for="explanation">Erläuterung:</label>
 			<br/>
@@ -48,7 +48,7 @@
 			<br/>
 			
 			Antwort ist richtig:
-			<input type="checkbox" name="rightAnswer[]" value="1" />
+			<input id="1" type="checkbox" name="rightAnswer1" value="1" />
 			<br/>
 			<label for="explanation">Erläuterung:</label>
 			<br/>
@@ -60,7 +60,7 @@
 			<br/>
 			
 			Antwort ist richtig:
-			<input type="checkbox" name="rightAnswer[]" value="1" />
+			<input id="2" type="checkbox" name="rightAnswer2" value="1" />
 			<br/>
 			<label for="explanation">Erläuterung:</label>
 			<br/>
@@ -72,7 +72,7 @@
 			<br/>
 			
 			Antwort ist richtig:
-			<input type="checkbox" name="rightAnswer[]" value="1" />
+			<input id="3" type="checkbox" name="rightAnswer3" value="1" />
 			<br/>
 			<label for="explanation">Erläuterung:</label>
 			<br/>

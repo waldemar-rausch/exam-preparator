@@ -37,7 +37,7 @@
 			<input type="text" name="answer[]" value="<?php echo $answer1; ?>"/>
 			<br />
 			Antwort ist richtig:
-			<input type="checkbox" name="rightAnswer[]" value="1" <?php if($evaluation1 == 1) {echo 'checked="checked"'; }?> />
+			<input type="checkbox" name="rightAnswer0" value="1" <?php if($evaluation1 == 1) {echo 'checked="checked"'; }?> />
 			<br/>
 			<label for="explanation">Erläuterung:</label>
 			<textarea class="padding10" style="width:100%" name="explanation[]" rows="10"><?php echo $explanation1; ?></textarea>
@@ -47,7 +47,7 @@
 			<input type="text" name="answer[]" value="<?php echo $answer2; ?>"/>
 			<br/>
 			Antwort ist richtig:
-			<input type="checkbox" name="rightAnswer[]" value="1" <?php if($evaluation2 == 1) {echo 'checked="checked"'; }?> />
+			<input type="checkbox" name="rightAnswer1" value="1" <?php if($evaluation2 == 1) {echo 'checked="checked"'; }?> />
 			<br/>
 			<label for="explanation">Erläuterung:</label>
 			<br/>
@@ -58,7 +58,7 @@
 			<input type="text" name="answer[]" value="<?php echo $answer3; ?>"/>
 			<br/>
 			Antwort ist richtig:
-			<input type="checkbox" name="rightAnswer[]" value="1" <?php if($evaluation3 == 1) {echo 'checked="checked"'; }?>/>
+			<input type="checkbox" name="rightAnswer2" value="1" <?php if($evaluation3 == 1) {echo 'checked="checked"'; }?>/>
 			<br/>
 			<label for="explanation">Erläuterung:</label>
 			<br/>
@@ -69,7 +69,7 @@
 			<input type="text" name="answer[]" value="<?php echo $answer4; ?>"/>
 			<br/>
 			Antwort ist richtig:
-			<input type="checkbox" name="rightAnswer[]" value="1" <?php if($evaluation4 == 1) {echo 'checked="checked"'; }?>/>
+			<input type="checkbox" name="rightAnswer3" value="1" <?php if($evaluation4 == 1) {echo 'checked="checked"'; }?>/>
 			<br/>
 			<label for="explanation">Erläuterung:</label>
 			<br/>
