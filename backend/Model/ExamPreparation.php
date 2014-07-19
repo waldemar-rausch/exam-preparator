@@ -107,16 +107,24 @@ class ExamPreparation extends Base
 		$pdoStatement = $this->_pdo->prepare(
 					'INSERT INTO 
 						question (
+						    topic,
 							question, 
 							startDate, 
 							author
 						) 
 					 VALUES(
+					    :topic,
 						:question,
 						:startDate,
 						:author
 					);
 		');
+
+        $pdoStatement->bindValue(
+            ':topic',
+            $post['topic'],
+            PDO::PARAM_STR
+        );
 		
 		$pdoStatement->bindValue(
 				':question', 
@@ -342,8 +350,9 @@ class ExamPreparation extends Base
 			throw new InvalidArgumentException();
 		}
 
-        $pdoStatement = $this->_pdo->prepare('UPDATE question SET question = :question, startDate = :startDate, author = :author WHERE id = '.$_GET['id']);
-		$pdoStatement->bindValue(':question', $_POST['question'], PDO::PARAM_STR);
+        $pdoStatement = $this->_pdo->prepare('UPDATE question SET topic = :topic, question = :question, startDate = :startDate, author = :author WHERE id = '.$_GET['id']);
+        $pdoStatement->bindValue(':topic', $_POST['topic'], PDO::PARAM_STR);
+        $pdoStatement->bindValue(':question', $_POST['question'], PDO::PARAM_STR);
 		$pdoStatement->bindValue(':startDate', date('Y-m-d', strtotime($_POST['startDate'])), PDO::PARAM_STR);
 		$pdoStatement->bindValue(':author', $_SESSION['user'], PDO::PARAM_STR);
 		$pdoStatement->execute();

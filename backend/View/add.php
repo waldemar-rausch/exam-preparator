@@ -25,8 +25,11 @@
 		</form>
 	</div>
 	<div class="content">
+        <div class="content">
 		<form name="newEntry" method="post" action="#">
-			<label for="question">Frage:</label><br/>
+            <label for="topic">Thema</label><br/>
+            <input id="topic" name="topic" type="text"/><br/><br/>
+            <label for="question">Frage:</label><br/>
 			<textarea class="ckeditor" cols="80" id="question" name="question" rows="10"></textarea>
 			<br /><br />
 			<b>Antwortmöglichkeiten</b>
